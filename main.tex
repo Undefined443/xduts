@@ -1,0 +1,45 @@
+\documentclass{xduugthesis}
+
+\usepackage{minted}  % 渲染代码语法高亮，需要安装 Python 和 Python Pygments 包
+\usepackage{booktabs}  % 绘制三线表
+
+\usepackage{tikz}
+
+\xdusetup{
+    style = { cjk-font = founder, latin-font = tac }, 
+    % style = { cjk-font = fandol, latin-font = gyre }, % 这两个字体是通用字体，但是 fandol 字符少，gyre 不好看
+    info = {
+        student-id = {},
+        class-id = {},
+        title = {},
+        department = {计算机科学与技术学院},
+        major = {软件工程},
+        author = {},
+        supervisor = {},
+        abstract = {chapters/00-abstract.tex},
+        abstract* = {chapters/00-abstract-en.tex},
+        keywords = {关键词1,关键词2,关键词3},
+        keywords* = {Keyword1,Keyword2,Keyword3},
+        acknowledgements = {chapters/05-acknowledgements.tex},
+        bib-resource = {references.bib},
+        appendix = {chapters/06-appendix.tex}
+    }
+}
+
+\begin{document}
+
+\input{macros.tex}
+
+\input{chapters/01-introduction}
+
+\input{chapters/02-1-figure}
+\input{chapters/02-2-tabular}
+\input{chapters/02-3-citation}
+\input{chapters/02-4-theorem}
+\input{chapters/02-5-list}
+\input{chapters/02-6-code}
+
+\input{chapters/03-conclusion}
+\input{chapters/04-epilogue}
+
+\end{document}
